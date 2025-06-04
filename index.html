@@ -140,11 +140,25 @@
                 <div class="container">
                     <div class="product new">
                         <div class="product-picture">
-                            <img
+                            <!-- <img
                                 src="images/vr1.jpg"
                                 alt="product: Penom Case"
                                 loading="lazy"
-                            />
+                            /> -->
+                            <picture>
+                                <source
+                                    srcset="images/vr1.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="images/vr1.jpg"
+                                    alt="product: Penom Case"
+                                    loading="lazy"
+                                    width="300"
+                                    height="300"
+                                    decoding="async"
+                                />
+                            </picture>
                         </div>
                         <div class="product-info">
                             <h5 class="categories">Headsets, Apple</h5>
