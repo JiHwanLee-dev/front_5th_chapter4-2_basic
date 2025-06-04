@@ -94,9 +94,30 @@
         </header>
 
         <section class="hero">
-            <img class="desktop" src="images/Hero_Desktop.jpg" />
+            <!-- <img class="desktop" src="images/Hero_Desktop.jpg" />
             <img class="mobile" src="images/Hero_Mobile.jpg" />
-            <img class="tablet" src="images/Hero_Tablet.jpg" />
+            <img class="tablet" src="images/Hero_Tablet.jpg" /> -->
+            <picture>
+                <source
+                    media="(min-width: 1024px)"
+                    srcset="images/Hero_Desktop.webp"
+                    type="image/webp"
+                />
+                <source
+                    media="(min-width: 768px)"
+                    srcset="images/Hero_Tablet.webp"
+                    type="image/webp"
+                />
+                <source srcset="images/Hero_Mobile.webp" type="image/webp" />
+                <img
+                    class="hero-img"
+                    src="images/Hero_Mobile.jpg"
+                    alt="VR Headset Hero Image"
+                    fetchpriority="high"
+                    width="100%"
+                    height="auto"
+                />
+            </picture>
 
             <div class="hero-content">
                 <div class="container">
@@ -122,6 +143,7 @@
                             <img
                                 src="images/vr1.jpg"
                                 alt="product: Penom Case"
+                                loading="lazy"
                             />
                         </div>
                         <div class="product-info">
@@ -139,6 +161,7 @@
                             <img
                                 src="images/vr2.jpg"
                                 alt="product: Noise Cancelling Headphone"
+                                loading="lazy"
                             />
                         </div>
                         <div class="product-info">
@@ -156,6 +179,7 @@
                             <img
                                 src="images/vr3.jpg"
                                 alt="product: Canon Digital SLR EOS Rebel T6"
+                                loading="lazy"
                             />
                         </div>
                         <div class="product-info">
