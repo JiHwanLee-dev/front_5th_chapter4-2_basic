@@ -1,0 +1,30 @@
+name: Deploy to Firebase Hosting
+
+on:
+    push:
+        branches:
+            - main # 또는 master, 프로젝트의 기본 브랜치 이름
+    workflow_dispatch:
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: "18"
+
+            - name: Install dependencies
+              run: npm ci # 만약 package.json이 있는 경우
+
+            - name: Deploy to Firebase
+              uses: FirebaseExtended/action-hosting-deploy@v0
+              with:
+                  repoToken: "${{ secrets.GITHUB_TOKEN }}"
+                  firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+                  channelId: live
+                  projectId: hanghae-chapter-4-2 # 여기에 실제 Firebase 프로젝트 ID를 입력하세요
