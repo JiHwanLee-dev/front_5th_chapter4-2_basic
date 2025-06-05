@@ -6,6 +6,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Home - Tech Shop</title>
 
+        <!-- SEO 메타 태그 추가 -->
+        <meta
+            name="description"
+            content="Discover our premium collection of VR headsets including Apple, PlayStation, and Oculus. Shop the latest virtual reality technology with competitive prices and worldwide shipping."
+        />
+        <meta
+            name="keywords"
+            content="VR headset, virtual reality, Apple headset, PlayStation VR, Oculus, tech shop"
+        />
+        <meta name="author" content="Tech Shop" />
+
+        <meta property="og:title" content="Home - Tech Shop | VR Headsets" />
+        <meta
+            property="og:description"
+            content="Explore our premium VR headset collection. Find the perfect virtual reality device for gaming, entertainment, and professional use."
+        />
+        <meta
+            property="og:image"
+            content="https://your-domain.com/images/og-image.jpg"
+        />
+        <meta property="og:url" content="https://your-domain.com" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Home - Tech Shop | VR Headsets" />
+        <meta
+            name="twitter:description"
+            content="Explore our premium VR headset collection. Find the perfect virtual reality device for gaming, entertainment, and professional use."
+        />
+
         <!-- 기존 Google Fonts 스타일시트 -->
         <!-- <link
             href="https://fonts.googleapis.com/css?family=Heebo:300,400,600,700&display=swap"
@@ -13,23 +42,6 @@
         /> -->
         <link rel="stylesheet" href="/css/styles.css" />
         <!-- <link rel="stylesheet" type="text/css" href="/css/slick.css"/> -->
-        <!-- Google Tag Manager -->
-        <!-- <script>
-            (function (w, d, s, l, i) {
-                w[l] = w[l] || [];
-                w[l].push({
-                    "gtm.start": new Date().getTime(),
-                    event: "gtm.js",
-                });
-                var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s),
-                    dl = l != "dataLayer" ? "&l=" + l : "";
-                j.async = true;
-                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-                f.parentNode.insertBefore(j, f);
-            })(window, document, "script", "dataLayer", "GTM-PKK35GL5");
-        </script> -->
-        <!-- Google Tag Manager -->
         <script async>
             (function (w, d, s, l, i) {
                 w[l] = w[l] || [];
@@ -50,21 +62,28 @@
 
         <!-- Cookie Consent by FreePrivacyPolicy.com https://www.FreePrivacyPolicy.com -->
         <script
+            defer
             type="text/javascript"
             src="//www.freeprivacypolicy.com/public/cookie-consent/4.1.0/cookie-consent.js"
             charset="UTF-8"
         ></script>
-        <script type="text/javascript" charset="UTF-8">
-            cookieconsent.run({
-                notice_banner_type: "simple",
-                consent_type: "express",
-                palette: "light",
-                language: "en",
-                page_load_consent_levels: ["strictly-necessary"],
-                notice_banner_reject_button_hide: false,
-                preferences_center_close_button_hide: false,
-                page_refresh_confirmation_buttons: false,
-                website_name: "Performance Course",
+        <script defer type="text/javascript" charset="UTF-8">
+            window.addEventListener("load", function () {
+                if (window.cookieconsent) {
+                    cookieconsent.run({
+                        notice_banner_type: "simple",
+                        consent_type: "express",
+                        palette: "light",
+                        language: "en",
+                        page_load_consent_levels: ["strictly-necessary"],
+                        notice_banner_reject_button_hide: false,
+                        preferences_center_close_button_hide: false,
+                        page_refresh_confirmation_buttons: false,
+                        website_name: "Performance Course",
+                    });
+                } else {
+                    console.warn("Cookie consent script not loaded");
+                }
             });
         </script>
     </head>
